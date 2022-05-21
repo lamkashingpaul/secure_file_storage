@@ -1,0 +1,18 @@
+# Vscode settings
+.vscode/
+
+# Python virtual environment
+venv/
+
+# Productions Related
+secure_file_storage/.env
+secure_file_storage/secure_file_storage.sock
+
+# User uploaded files
+media/
+secure_file_storage/secure_file_storage/db.sqlite3
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*$py.class

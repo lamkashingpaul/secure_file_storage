@@ -1,0 +1,17 @@
+{% extends 'files/base.html' %}
+
+{% block content%}
+{% if user.is_authenticated %}
+<h1>Upload File</h1>
+
+<form enctype="multipart/form-data" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="btn btn-secondary">
+</form>
+
+{% else %}
+<h1>You need to be logged in to see this page</h1>
+
+{% endif %}
+{% endblock %}

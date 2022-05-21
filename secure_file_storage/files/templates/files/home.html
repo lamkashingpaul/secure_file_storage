@@ -1,0 +1,11 @@
+{% extends 'files/base.html' %}
+
+{% block content%}
+    <h1>Welcome to My Cloud</h1>
+    {% if user.is_authenticated %}
+        <h5><li>Choose Your Action from the Navigation Bar to Start</li></h5>
+    {% else %}
+
+        <h5><li>Please Login or Register to Start</li></h5>
+    {% endif %}
+{% endblock %}
