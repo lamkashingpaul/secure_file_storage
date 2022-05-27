@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -42,12 +41,15 @@ INSTALLED_APPS = [
     'members.apps.MembersConfig',
     'codes.apps.CodesConfig',
 
+    # 3rd party utils
     'private_storage',
     'phonenumber_field',
 
 ]
 
 AUTH_USER_MODEL = 'members.MyCloudUser'
+
+LOGIN_URL = 'login'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -6,7 +6,7 @@ from .forms import DocumentForm
 import os
 
 
-@login_required(login_url='/members/login_user/')
+@login_required
 def remove_file(request, file_id):
     file_query = Document.objects.filter(id=file_id)
 
@@ -18,8 +18,8 @@ def remove_file(request, file_id):
             if os.path.exists(file.file.path):
                 os.remove(file.file.path)
                 os.removedirs(os.path.dirname(file.file.path))
-                file.delete()
 
+            file.delete()
             messages.success(request, 'File deleted successfully')
         else:
             messages.success(request, 'You are not authorized to delete this file')
@@ -27,7 +27,7 @@ def remove_file(request, file_id):
     return redirect('list_files')
 
 
-@login_required(login_url='/members/login_user/')
+@login_required
 def upload_file(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
@@ -43,7 +43,7 @@ def upload_file(request):
     return render(request, 'files/upload.html', {'form': form})
 
 
-@login_required(login_url='/members/login_user/')
+@login_required
 def all_files(request):
     file_list = Document.objects.filter(user=request.user)
     return render(request, 'files/file_list.html', {'file_list': file_list})

@@ -8,16 +8,15 @@ DEBUG = True
 ALLOWED_HOSTS += ['127.0.0.1']
 
 INSTALLED_APPS += [
-    # Debug tools
-    'debug_toolbar',
+    'django.contrib.admin',  # admin apps
+    'debug_toolbar',  # debug tools
 ]
 
 MIDDLEWARE += [
-    # Debug tools
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',  # debug tools
 ]
 
-# IPs for debug tool
+# allowed IPs for debug context
 INTERNAL_IPS += [
     '127.0.0.1',
 ]

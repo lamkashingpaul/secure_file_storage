@@ -12,7 +12,6 @@ class StorageView(PrivateStorageView):
 
 urlpatterns = [
     re_path('^private-media/', include([re_path(r'^(?P<path>.*)$', StorageView.as_view(), name='serve_private_file')])),
-    path('admin/', admin.site.urls),
 
     path('', include('files.urls')),
 
@@ -23,3 +22,5 @@ urlpatterns = [
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns += path('__debug__/', include(debug_toolbar.urls)),
+
+    urlpatterns += path('admin/', admin.site.urls),

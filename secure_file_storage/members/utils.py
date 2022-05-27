@@ -1,19 +1,10 @@
-from django.core.exceptions import ImproperlyConfigured
-from os import environ
 from twilio.rest import Client
+import os
 
 
-def get_env_setting(setting):
-    ''' Get the environment setting or return exception '''
-    try:
-        return environ[setting]
-    except KeyError:
-        raise ImproperlyConfigured(f'Set the {setting} env variable')
-
-
-account_sid = get_env_setting('TWILIO_ACCOUNT_SID')
-auth_token = get_env_setting('TWILIO_AUTH_TOKEN')
-from_phone = get_env_setting('FROM_PHONE')
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+from_phone = os.environ['FROM_PHONE']
 
 client = Client(account_sid, auth_token)
 
