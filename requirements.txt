@@ -9,9 +9,11 @@ django-debug-toolbar==3.4.0
 django-dotenv==1.4.2
 django-phonenumber-field==6.1.0
 django-private-storage==3.0
+docopt==0.6.2
 filelock==3.7.0
 idna==3.3
 phonenumbers==8.12.48
+pipreqs==0.4.11
 pkg_resources==0.0.0
 platformdirs==2.5.2
 pycodestyle==2.8.0
@@ -26,3 +28,4 @@ urllib3==1.26.9
 uWSGI==2.0.20
 virtualenv==20.14.1
 virtualenv-clone==0.5.7
+yarg==0.1.9
