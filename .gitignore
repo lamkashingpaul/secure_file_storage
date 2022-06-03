@@ -7,6 +7,7 @@ venv/
 # Productions Related
 secure_file_storage/.env
 secure_file_storage/secure_file_storage.sock
+secure_file_storage/secure_file_storage/static
 
 # User uploaded files
 media/
