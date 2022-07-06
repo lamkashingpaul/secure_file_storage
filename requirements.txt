@@ -4,7 +4,7 @@ backports.zoneinfo==0.2.1
 certifi==2022.5.18.1
 charset-normalizer==2.0.12
 distlib==0.3.4
-Django==4.0.4
+Django==4.0.6
 django-debug-toolbar==3.4.0
 django-dotenv==1.4.2
 django-phonenumber-field==6.1.0
